@@ -1,33 +1,78 @@
-HELP.md
-target/
-.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
-
-### STS ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
-
-### IntelliJ IDEA ###
-.idea
-*.iws
+# ================================
+# IntelliJ IDEA
+# ================================
+.idea/
 *.iml
+out/
 *.ipr
+*.iws
 
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
+# ================================
+# Maven / Gradle build
+# ================================
+target/
 build/
-!**/src/main/**/build/
-!**/src/test/**/build/
+!gradle/wrapper/gradle-wrapper.jar
+.gradle/
 
-### VS Code ###
+# ================================
+# Logs e arquivos temporários
+# ================================
+*.log
+logs/
+*.tmp
+*.bak
+*.swp
+*.swo
+
+# ================================
+# Arquivos de sistema
+# ================================
+.DS_Store
+Thumbs.db
+
+# ================================
+# Configurações locais
+# ================================
+application.properties
+application-local.properties
+application-dev.properties
+.env
+
+# ================================
+# Banco de dados local
+# ================================
+# H2, SQLite, Derby, HSQLDB, etc.
+*.mv.db
+*.trace.db
+*.h2.db
+*.db
+*.sqlite
+*.sqlite3
+database/
+data/
+db/
+
+# ================================
+# Arquivos de build Java
+# ================================
+*.class
+*.jar
+*.war
+*.ear
+
+# ================================
+# VSCode (caso use junto)
+# ================================
 .vscode/
+
+# ================================
+# Backup / cache
+# ================================
+*.orig
+*.rej
+*.cache
+*.bak
+*.old
+*.tmp
+*.swp
