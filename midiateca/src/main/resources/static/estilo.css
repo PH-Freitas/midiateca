@@ -1,0 +1,282 @@
+/*ESTILO GERAL*/
+* { box-sizing: border-box;
+}
+body {
+      font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: white;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    /*h1{ text-align: center; }*/
+    /*.link { text-align: center; margin-top: 20px; margin-bottom: 20px; }*/ }
+/*CABEÇALHO*/
+header {
+    position: relative;
+    background-color: white;
+    color: black;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+/*CONTEÚDO PRINCIPAL*/
+main {
+    max-width: 900px;
+    margin: 40px auto;
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+}
+/*LINKS E BOTÕES*/
+a, button {
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+/* Links */
+a { color: dodgerblue;
+    text-decoration: none;
+}
+a:hover {
+    color: dodgerblue;
+    text-decoration: underline;
+}
+/* Botões principais */
+button, .btn {
+    background-color: dodgerblue;
+    border: none;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 5px;
+    font-size: 28px;
+    width: 25%;
+    align-self: center;
+}
+button:hover, .btn:hover {
+    background-color: #1e60a1;
+}
+/*FORMULÁRIOS*/
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+}
+input[type="text"],
+input[type="number"],
+textarea
+{
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    width: 35%;
+    align-self: center;
+}
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+/*TABELA*/
+table {
+    width: 75%;
+    border-collapse: collapse;
+    margin-top: 25px;
+    align-self: center;
+}
+.tabela {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+th {
+    background-color: dodgerblue;
+    color: white;
+    text-align: left;
+    padding: 10px;
+}
+td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+tr:hover {
+    background-color: white;
+}
+/*BOTOES DA TABELA*/
+.actions {
+    display: flex; gap: 10px;
+}
+.actions a {
+    background-color: #6c757d;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+}
+.actions a:hover {
+    background-color: #5a6268;
+}
+/*Botão excluir*/
+.actions .delete {
+    background-color: #dc3545;
+}
+.actions .delete:hover {
+    background-color: #a71d2a;
+}
+/*FORMULARIO*/
+form {
+    max-width: 500px;
+    margin: 40px auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+/*TÍTULO DA PÁGINA*/
+h1 { text-align: center;
+    margin-top: 30px;
+    color: #2c3e50;
+}
+/*CADA CAMPO*/
+form p {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-weight: 500;
+}
+/*CAMPOS DE TEXTO E ÁREA DE TEXTO*/
+input[type="text"],
+input[type="number"],
+textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+/* BOTÃO SALVAR */
+button {
+    background-color: dodgerblue;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    align-self: center;
+    transition: background-color 0.2s ease;
+} button:hover {
+      background-color: #1e90ff;
+  }
+/* LINK "VOLTAR" ABAIXO DO FORMULÁRIO */
+.link {
+    text-align: center;
+    margin-top: 20px;
+}
+.link a {
+    background-color: #6c757d;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+.link a:hover {
+    background-color: #5a6268;
+}
+/*RESPONSIVIDADE*/
+@media
+(max-width: 700px)
+{
+    main {
+        margin: 20px;
+        padding: 20px;
+    }
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+    tr {
+        margin-bottom: 15px;
+    }
+    th {
+        display: none;
+    }
+    td {
+        border: none;
+        padding: 8px 0;
+    }
+    td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        display: block;
+    }
+}
+/*BOTÃO DARK MODE*/
+.dark-mode-toggle {
+    position: fixed;
+    top: 15px;
+    right: 20px;
+    background-color: inherit;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: background-color 0.3s ease;
+    z-index: 1000;
+    width: auto;
+}
+.dark-mode-toggle:hover
+{
+    background-color: #1a252f;
+}
+/*DARK MODE*/
+body.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+body.dark-mode header {
+    background-color: #1f1f1f;
+    color: white;
+}
+body.dark-mode main {
+    background-color: #1e1e1e;
+    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.05);
+}
+body.dark-mode table {
+    color: white;
+}
+body.dark-mode th {
+    background-color: #333;
+}
+body.dark-mode tr:hover {
+    background-color: #2a2a2a;
+}
+body.dark-mode a {
+    color: #66b3ff;
+}
+body.dark-mode .btn {
+    background-color: #3399ff;
+}
+body.dark-mode .btn:hover {
+    background-color: #267acc;
+}
+body.dark-mode .actions a {
+    background-color: #444;
+}
+body.dark-mode .actions .delete { }

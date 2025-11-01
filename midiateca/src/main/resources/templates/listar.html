@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/estilo.css}">
+    <link rel="icon" type="image/png" th:href="@{/icon.png}">
+    <title>Catálogo de Mídias</title>
+</head>
+<body>
+
+<div class="container">
+    <h1>Catálogo de Mídias</h1>
+
+    <form th:action="@{/midias}" method="get" class="form-busca">
+        <input type="text" name="busca" placeholder="Buscar por título ou autor/diretor" />
+        <button type="submit">Buscar</button>
+    </form>
+
+    <div class="link">
+        <a th:href="@{/midias/novo}" class="botao-link">Adicionar nova mídia</a>
+    </div>
+<div class="tabela">
+    <table class="tabela-midias">
+        <thead>
+        <tr>
+            <th>Título</th>
+            <th>Autor/Diretor</th>
+            <th>Ano</th>
+            <th>Gênero</th>
+            <th>Ações</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="m : ${midias}">
+            <td th:text="${m.titulo}"></td>
+            <td th:text="${m.autorDiretor}"></td>
+            <td th:text="${m.ano}"></td>
+            <td th:text="${m.genero}"></td>
+            <td>
+                <a th:href="@{'/midias/' + ${m.id}}">Ver</a> |
+                <a th:href="@{'/midias/excluir/' + ${m.id}}">Excluir</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    </div>
+
+    <div class="link">
+        <a th:href="@{/}" class="botao-link">Voltar</a>
+    </div>
+</div>
+
+<script th:src="@{/darkmode.js}"></script>
+</body>
+</html>

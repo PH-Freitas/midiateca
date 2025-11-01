@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/estilo.css}">
+    <link rel="icon" type="image/png" th:href="@{/icon.png}">
+
+    <title>Detalhes da Mídia</title>
+</head>
+<body>
+<h1 th:text="${midia.titulo}"></h1>
+
+<p><strong>Autor/Diretor:</strong> <span th:text="${midia.autorDiretor}"></span></p>
+<p><strong>Ano:</strong> <span th:text="${midia.ano}"></span></p>
+<p><strong>Gênero:</strong> <span th:text="${midia.genero}"></span></p>
+<p><strong>Sinopse:</strong> <span th:text="${midia.sinopse}"></span></p>
+
+<a th:href="@{/midias}">Voltar</a>
+<script th:src="@{/darkmode.js}"></script>
+</body>
+</html>
